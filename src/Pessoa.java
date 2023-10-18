@@ -1,3 +1,4 @@
+
 public class Pessoa {
     private String nome;
     private int idade;
@@ -6,12 +7,13 @@ public class Pessoa {
     private byte genero;
     private String cpf;
     private String nomeDaMae;
+    private String profissao;
 
     public String getNome() {
         return nome;
     }
 
-    public Pessoa(String nome, int idade, double altura, double peso, byte genero, String cpf, String nomeDaMae) {
+    public Pessoa(String nome, int idade, String profissao, double altura, double peso, byte genero, String cpf, String nomeDaMae) {
         this.nome = nome;
         this.idade = idade;
         this.altura = altura;
@@ -19,6 +21,15 @@ public class Pessoa {
         this.genero = genero;
         this.cpf = cpf;
         this.nomeDaMae = nomeDaMae;
+        this.profissao = profissao;
+    }
+
+    public String getProfissao() {
+        return profissao;
+    }
+
+    public void setProfissao(String profissao) {
+        this.profissao = profissao;
     }
 
     public int getIdade() {
@@ -72,4 +83,10 @@ public class Pessoa {
     public void setIdade(int idade) {
         this.idade = idade;
     }
+
+    public String toString() {
+   String dadosPessoa = getNome()+", "+getIdade()+", "+getPeso()+", "+getAltura()+", "+getGenero()+", "+getCpf()+", "+getNomeDaMae();
+       return dadosPessoa;
+    }
 }
+
